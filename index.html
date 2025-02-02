@@ -50,12 +50,12 @@
     </div>
 
     <script>
-        // Fungsi untuk mengubah teks dan link tombol
+        // Fungsi untuk mengubah teks dan membuka Instagram di tab baru
         function ubahTeks() {
             var button = document.querySelector("button");
             button.innerText = "Instagram"; // Mengubah teks tombol
             button.onclick = function() {
-                window.location.href = "https://instagram.com"; // Redirect ke Instagram
+                window.open("https://instagram.com", "_blank"); // Buka Instagram di tab baru
             };
             document.getElementById("text").innerText = "Klik tombol untuk membuka Instagram!";
         }
