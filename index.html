@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Dinamis dengan JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Halaman Dinamis dengan JavaScript</h1>
+        <p id="text">Tunggu sebentar, saya akan mengubah tampilan halaman ini.</p>
+        <button onclick="ubahTeks()">Klik Saya</button>
+        <button onclick="ubahWarna()">Ganti Warna Latar</button>
+    </div>
+
+    <script>
+        // Fungsi untuk mengubah teks
+        function ubahTeks() {
+            document.getElementById("text").innerText = "Teks telah berubah setelah klik tombol!";
+        }
+
+        // Fungsi untuk mengubah warna latar belakang halaman
+        function ubahWarna() {
+            document.body.style.backgroundColor = "#d3f4ff"; // Ubah latar belakang jadi biru muda
+        }
+    </script>
+</body>
+</html>
