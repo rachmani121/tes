@@ -10,6 +10,7 @@
             text-align: center;
             background-color: #f4f4f4;
             padding: 20px;
+            transition: background-color 1s ease;
         }
         h1 {
             color: #333;
@@ -43,20 +44,27 @@
 <body>
     <div class="container">
         <h1>Halaman Dinamis dengan JavaScript</h1>
-        <p id="text">Tunggu sebentar, saya akan mengubah tampilan halaman ini.</p>
+        <p id="text">Klik tombol di bawah untuk mengubah halaman ini.</p>
         <button onclick="ubahTeks()">Klik Saya</button>
-        <button onclick="ubahWarna()">Ganti Warna Latar</button>
+        <button onclick="ubahWarna()">Ganti Latar YouTube</button>
     </div>
 
     <script>
-        // Fungsi untuk mengubah teks
+        // Fungsi untuk mengubah teks dan link tombol
         function ubahTeks() {
-            document.getElementById("text").innerText = "Teks telah berubah setelah klik tombol!";
+            var button = document.querySelector("button");
+            button.innerText = "Instagram"; // Mengubah teks tombol
+            button.onclick = function() {
+                window.location.href = "https://instagram.com"; // Redirect ke Instagram
+            };
+            document.getElementById("text").innerText = "Klik tombol untuk membuka Instagram!";
         }
 
-        // Fungsi untuk mengubah warna latar belakang halaman
+        // Fungsi untuk mengganti latar belakang dengan gambar YouTube
         function ubahWarna() {
-            document.body.style.backgroundColor = "#d3f4ff"; // Ubah latar belakang jadi biru muda
+            document.body.style.backgroundImage = "url('https://www.youtube.com/img/desktop/yt_1200.png')";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "center center";
         }
     </script>
 </body>
